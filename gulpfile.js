@@ -2,7 +2,7 @@ const gulp        = require('gulp'); //говорим gulp об использо
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass')(require('sass'));
 const rename = require("gulp-rename");
-//const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 
 // Static server
@@ -21,10 +21,7 @@ gulp.task('styles', function() { //компиляция кода sass
                 prefix: "",
                 suffix: ".min",
               }))
-            //.pipe(autoprefixer({
-                //browsers: ['2 last versions'],
-                //cascade: false,
-            //}))
+            .pipe(autoprefixer())
             .pipe(cleanCSS({compatibility: 'ie8'}))
             .pipe(gulp.dest("src/css"))
             .pipe(browserSync.stream());
