@@ -1,6 +1,12 @@
-@import 'base/variables';
+@import 'base/variables'; /* импортируем файлы для отдельных блоков в этот главный файл */
 
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
-
+.container { /* глобальный класс, ограничиваем контент в соответствии с макетом (10 колонок, если открыть сетку) */
+    max-width: 950px;
+    margin: 0 auto;
+}
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/buttons';

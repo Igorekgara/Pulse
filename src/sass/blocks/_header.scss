@@ -1,0 +1,37 @@
+.header { /* шапка header в отдельном файле, тк возможно в будущем она будет использоваться на других страницах, повторяться */
+    display: flex; /* флексы для расположения блоков */
+    justify-content: space-between;
+    align-items: center;
+    &__logo { /*  подстраховка, при условии, что когда нибудь изменится лого */
+        width: 250px; /* задаем ширину логотипа */
+        img {
+            width: 100%; /* указываем, что любая картинка будет 100% это ширины */
+        }
+    }
+    &__official {
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        span {
+            font-size: 18px;
+            display: block;
+        }
+    }
+    &__phone {
+        display: block;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        &:hover { /* отключаем изменение текста при наведении курсора на телефон */
+            color: #FFFFFF;
+            /* text-decoration: none; */
+        }
+    }
+    &__contacts { /* располагаем кнопку по правому краю, как в макете */
+        display: flex;
+        flex-direction: column; /* изменение со стороки на колонку */
+        align-items: flex-end;
+    }
+}
