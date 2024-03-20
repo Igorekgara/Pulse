@@ -1,0 +1,21 @@
+.feed-form {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    width: 303px;
+    input {
+        height: 54px;
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        margin-bottom: 15px;
+        border: none;
+        padding: 0 21px;
+        color: #4B4B4B;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+        &:nth-child(3) { /* псевдо класс, указываем последнему элементу отдельный margin */
+            margin-bottom: 20px;
+        }
+    }
+}
